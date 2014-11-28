@@ -1,0 +1,258 @@
+/*!
+Adapted from SlickMap CSS by Matt Everson of Astuteo, LLC
+http://astuteo.com/slickmap
+
+Version 1.1
+Copyright (c) 2009 Astuteo, LLC http://astuteo.com
+*/
+
+.visual-sitemap-wrap {
+	margin-right: 0;
+}
+
+.visual-sitemap {
+	margin: 40px 0;
+	float: left;
+	width: 100%;
+	position: relative;
+}
+
+/* ------------------------------------------------------------
+	Reset Styles (adapted from meyerweb.com)
+------------------------------------------------------------ */
+
+.visual-sitemap div, .visual-sitemap span, .visual-sitemap applet, .visual-sitemap object, .visual-sitemap iframe, .visual-sitemap
+h1, .visual-sitemap h2, .visual-sitemap h3, .visual-sitemap h4, .visual-sitemap h5, .visual-sitemap h6, .visual-sitemap p, .visual-sitemap blockquote, .visual-sitemap pre, .visual-sitemap
+a, .visual-sitemap abbr, .visual-sitemap acronym, .visual-sitemap address, .visual-sitemap big, .visual-sitemap cite, .visual-sitemap code, .visual-sitemap
+del, .visual-sitemap dfn, .visual-sitemap em, .visual-sitemap font, .visual-sitemap img, .visual-sitemap ins, .visual-sitemap kbd, .visual-sitemap q, .visual-sitemap s, .visual-sitemap samp, .visual-sitemap
+small, .visual-sitemap strike, .visual-sitemap strong, .visual-sitemap sub, .visual-sitemap sup, .visual-sitemap tt, .visual-sitemap var, .visual-sitemap
+dl, .visual-sitemap dt, .visual-sitemap dd, .visual-sitemap ol, .visual-sitemap ul, .visual-sitemap li, .visual-sitemap
+fieldset, .visual-sitemap form, .visual-sitemap label, .visual-sitemap legend, .visual-sitemap
+table, .visual-sitemap caption, .visual-sitemap tbody, .visual-sitemap tfoot, .visual-sitemap thead, .visual-sitemap tr, .visual-sitemap th, .visual-sitemap td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: baseline;
+}
+
+/* ------------------------------------------------------------
+	Number of Columns
+------------------------------------------------------------ */
+
+.visual-sitemap li {
+	width: 10%;
+}
+
+.visual-sitemap li ul li {
+	width:100% !important;
+}
+
+.visual-sitemap .col0 { max-width: 300px; }
+.visual-sitemap .col1 { max-width: 300px; }
+.visual-sitemap .col2 { max-width: 600px; }
+.visual-sitemap .col3 { max-width: 900px; }
+.visual-sitemap .col4 { max-width: 1200px; }
+.visual-sitemap .col5 { max-width: 1500px; }
+.visual-sitemap .col6 { max-width: 1800px; }
+.visual-sitemap .col7 { max-width: 2100px; }
+.visual-sitemap .col8 { max-width: 2400px; }
+.visual-sitemap .col9 { max-width: 2700px; }
+.visual-sitemap .col10 { max-width: 3000px; }
+.visual-sitemap .col11 { max-width: 3300px; }
+.visual-sitemap .col12 { max-width: 3600px; }
+.visual-sitemap .col13 { max-width: 3900px; }
+.visual-sitemap .col14 { max-width: 4200px; }
+.visual-sitemap .col15 { max-width: 4500px; }
+.visual-sitemap .col16 { max-width: 4800px; }
+
+.visual-sitemap .col1 li { width:99.9%; }
+.visual-sitemap .col2 li { width:50%; }
+.visual-sitemap .col3 li { width:33.3%; }
+.visual-sitemap .col4 li { width:25%; }
+.visual-sitemap .col5 li { width:20%; }
+.visual-sitemap .col6 li { width:16.6%; }
+.visual-sitemap .col7 li { width:14.2%; }
+.visual-sitemap .col8 li { width:12.5%; }
+.visual-sitemap .col9 li { width:11.1%; }
+.visual-sitemap .col10 li { width:10%; }
+.visual-sitemap .col11 li { width:9%; }
+.visual-sitemap .col12 li { width:8.3%; }
+.visual-sitemap .col13 li { width:7.6%; }
+.visual-sitemap .col14 li { width:7.1%; }
+.visual-sitemap .col15 li { width:6.6%; }
+.visual-sitemap .col16 li { width:6.2%; }
+
+/* ------------------------------------------------------------
+	General Styles
+------------------------------------------------------------ */
+
+.visual-sitemap h1 {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 20px;
+	margin: 0 0 5px 0;
+}
+.visual-sitemap h2 {
+	font-size: 10px;
+	color: #777777;
+	margin: 0 0 20px 0;
+}
+.visual-sitemap a {
+	text-decoration: none;
+}
+.visual-sitemap ol, .visual-sitemap ul {
+	list-style: none;
+}
+.visual-sitemap li {
+	margin: 0;
+}
+.visual-sitemap li a.button {
+	white-space: normal;
+	position: relative;
+	text-align: center;
+	padding: 10px 0;
+}
+.visual-sitemap li a.action {
+	white-space: normal;
+	position: relative;
+	text-align: center;
+	padding: 10px 28px;
+}
+.visual-sitemap li a.button span {
+	position: absolute;
+	left: 9px;
+	top: 9px;
+}
+.visual-sitemap li a.button span.dashicons-plus {
+	top: 12px;
+}
+.visual-sitemap li a.button-primary span {
+	opacity: 0.55;
+}
+
+
+/* ------------------------------------------------------------
+	Site Map Styles
+------------------------------------------------------------ */
+
+/* --------	Top Level --------- */
+
+.visual-sitemap .vs-primary .vs-home {
+	display: block;
+	float: none;
+	background: #f1f1f1 url('../images/slickmap/L1-left.png') center bottom no-repeat;
+	position: relative;
+	z-index: 2;
+	padding: 0 0 30px 0;
+}
+.visual-sitemap .vs-primary .vs-breadcrumb {
+	display: block;
+	float: none;
+	background: #f1f1f1 url('../images/slickmap/vertical-line.png') center bottom repeat-y;
+	position: relative;
+	z-index: 2;
+	padding: 0 0 30px 0;
+	margin-bottom: 30px;
+}
+.visual-sitemap .vs-primary li {
+	min-width: 149px;
+	float: left;
+	background: url('../images/slickmap/L1-center.png') center top no-repeat;
+	padding: 30px 0;
+	margin-top: -30px;
+}
+.visual-sitemap .vs-primary li a.button {
+	margin: 0 20px 0 0;
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	height: auto;
+	line-height: normal;
+}
+.visual-sitemap .vs-primary li:last-child {
+	background: url('../images/slickmap/L1-right.png') center top no-repeat;
+}
+
+/* --------	Second Level --------- */
+
+.visual-sitemap .vs-primary li li {
+	width: 100%;
+	clear: left;
+	margin-top: 0;
+	padding: 10px 0 0 0;
+	background: url('../images/slickmap/vertical-line.png') center bottom repeat-y;
+}
+.visual-sitemap .vs-primary li li:first-child {
+	padding-top: 30px;
+}
+.visual-sitemap .vs-primary li li:last-child {
+	background: url('../images/slickmap/vertical-line.png') center bottom repeat-y;
+}
+
+/* --------	Third Level --------- */
+
+.visual-sitemap .vs-primary li li ul {
+	margin: 10px 0 0 0;
+	width: 100%;
+	float: right;
+	padding: 9px 0 10px 0;
+	background: #f1f1f1 url('../images/slickmap/L3-ul-top.png') center top no-repeat;
+}
+.visual-sitemap .vs-primary li li li {
+	background: url('../images/slickmap/L3-center.png') left center no-repeat;
+	padding: 5px 0;
+}
+.visual-sitemap .vs-primary li li li a {
+	width: 80%;
+	float: right;
+}
+.visual-sitemap .vs-primary li li li:first-child {
+	padding: 15px 0 5px 0;
+	background: url('../images/slickmap/L3-li-top.png') left center no-repeat;
+}
+.visual-sitemap .vs-primary li li li:last-child {
+	background: url('../images/slickmap/L3-bottom.png') left center no-repeat;
+}
+
+
+/* ------------------------------------------------------------
+	Utility Navigation
+------------------------------------------------------------ */
+
+.visual-sitemap .vs-utility {
+	float: right;
+	max-width: 80%;
+	margin-top: -30px;
+	margin-right: 10px;
+}
+.visual-sitemap .vs-utility li {
+	float: left;
+	margin-bottom: 10px;
+	width: auto;
+}
+.visual-sitemap .vs-utility li a.button {
+	margin: 0 10px 0 0;
+	padding: 10px 16px;
+	display: block;
+	font-size: 13px;
+	font-weight: bold;
+	height: auto;
+	line-height: normal;
+	position: relative;
+	z-index: 10;
+}
+.visual-sitemap .vs-utility li a:link:before,
+.visual-sitemap .vs-utility li a:visited:before {
+	margin-bottom: 3px;
+}
+
+@media screen and ( max-width: 782px ) {
+	.visual-sitemap .vs-primary {
+		clear: both;
+		padding-top: 50px;
+	}
+	.visual-sitemap .vs-utility {
+		max-width: none;
+	}
+}
