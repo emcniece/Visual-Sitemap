@@ -184,7 +184,9 @@ class Visual_Sitemap {
 			$output .= '<li class="vs-home"><a class="button disabled">'. get_bloginfo( 'name' ).'<span class="dashicons dashicons-admin-home"></span></a></li>';
 			if ( sizeof( $terms ) ):
 				foreach ( $terms as $term ):
-					$output .= '<li><a class="button button-primary action" href="'. esc_url( admin_url( add_query_arg( array( 'action' => 'edit', 'taxonomy' => $taxonomy, 'tag_ID' => $term->term_id, 'post_type' => 'post' ), 'edit-tags.php' ) ) ).'">'. wp_strip_all_tags( $term->name ).'<span class="dashicons dashicons-'. $taxonomy == 'category' ? 'category' : 'tag'.'"></span></a>';
+					$href = esc_url( admin_url( add_query_arg( array( 'action' => 'edit', 'taxonomy' => $taxonomy, 'tag_ID' => $term->term_id, 'post_type' => 'post' ), 'edit-tags.php' ) ) );
+					$dashicon = ($taxonomy == 'category') ? 'category' : 'tag';
+					$output .= '<li><a class="button button-primary action" href="'. $href.'">'. wp_strip_all_tags( $term->name ).'<span class="dashicons dashicons-'. $dashicon.'"></span></a>';
 
 					if ( $taxonomy == 'category' )
 						$posts = get_posts( array( 'category' => $term->term_id ) );
